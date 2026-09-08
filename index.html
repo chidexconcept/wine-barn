@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine Barn | Premium Drinks & Spirits</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🍷 Wine Barn</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#products">Catalog</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cartCount">0</span>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Exclusive Wines & Fine Spirits</h1>
+    <p>Discover luxury in every sip. Order directly via WhatsApp.</p>
+    <a href="#products" class="btn-primary">Explore Catalog</a>
+  </section>
+
+  <section id="products" class="products-section">
+    <h2>Our Collection</h2>
+    
+    <div class="category-buttons">
+      <button class="cat-btn active" onclick="filterProducts('all')">All</button>
+      <button class="cat-btn" onclick="filterProducts('wine')">Wines</button>
+      <button class="cat-btn" onclick="filterProducts('spirits')">Spirits</button>
+      <button class="cat-btn" onclick="filterProducts('rum')">Rum</button>
+      <button class="cat-btn" onclick="filterProducts('champagne')">Champagne</button>
+      <button class="cat-btn" onclick="filterProducts('beer')">Beer</button>
+      <button class="cat-btn" onclick="filterProducts('soft')">Soft Drinks</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-msg">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-price">Total: <span id="cartTotal">₦0</span></div>
+      <button class="btn-whatsapp" onclick="checkoutWhatsApp()">Order on WhatsApp 💬</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Wine Barn. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
